@@ -1,6 +1,6 @@
 # Associating Press
 
-<img width="410" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/33dadd57-29a3-471f-a714-5a7e09fc9c30">
+<img width="600" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/33dadd57-29a3-471f-a714-5a7e09fc9c30">
 
 
 ## Task
@@ -8,7 +8,7 @@ Articles in newspapers and other print media often span multiple columns and hav
 
 Object detection models 
 
-<img width="548" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/044304b8-4ccb-4e18-9891-2b0ae1cb1bc2">
+<img width="554" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/dfcf1723-74ac-4060-aaf2-f05740f2f1ff">
 
 
 ## Labelled Data 
@@ -18,7 +18,8 @@ We evaluate these methods on a hand-labeled dataset of 214 scans, randomly selec
 
 ## Outline of Approach
 
-<img width="554" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/dfcf1723-74ac-4060-aaf2-f05740f2f1ff">
+<img width="548" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/044304b8-4ccb-4e18-9891-2b0ae1cb1bc2">
+
 
 ### Rule-Based Algorithm
 
