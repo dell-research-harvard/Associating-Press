@@ -6,7 +6,7 @@
 ## Task
 Articles in newspapers and other print media often span multiple columns and have complex layouts. 
 
-Object detection models usually draw bounding boxes around types of object on the page, but multiple objects may comprise a full article. For example, a newspaper article could consist of one or more headline bounding boxes, a byline bounding box and multiple article bounding boxes, if it spans multiple columns. This repository contains provides a light-weight full self-supervised method for associating bounding boxes into full articles. 
+Object detection models usually draw bounding boxes around types of object on the page, but multiple objects may comprise a full article. For example, a newspaper article could consist of one or more headline bounding boxes, a byline bounding box and multiple article bounding boxes, if it spans multiple columns. This repository provides a light-weight fully self-supervised method for associating bounding boxes into full articles. 
 
 Some examples of complex layouts: 
 
@@ -15,13 +15,30 @@ Some examples of complex layouts:
 
 ## Labelled Data 
 
-While the pipeline is entirely self-supervised, we labelled a small dataset for evaluation.  This is a hand-labeled dataset of 214 scans, from 1968 and 1955. Summary statistics of this dataset: 
+While the pipeline is entirely self-supervised, we labelled small datasets for hyperparameter tuning and evaluation.  
 
-| Scan Count | Article bounding boxes | Headline bounding boxes | Article-article associations| 
-| -------- | ------- | ------- | ------- |
-| 214  | 3,803 | 2,805 | 1,851 |
+These datasets can be downloaded from huggingface. 
 
-This dataset can be downloaded from huggingface. 
+```
+from datasets import load_dataset
+
+# load evaluation split 
+dataset = load_dataset(
+    'dell-research-harvard/associating-press', 
+    data_files='eval.json'
+)
+
+# load test split 
+dataset = load_dataset(
+    'dell-research-harvard/associating-press', 
+    data_files='test.json'
+)
+```
+
+Info about where the data is from, counts etc. 
+Info about single page v multi-page 
+Info about ordered v unordered edges 
+Info about small v big articles 
 
 
 ## Outline of Approach
