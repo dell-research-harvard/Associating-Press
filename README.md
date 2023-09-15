@@ -10,17 +10,31 @@ Object detection models usually draw bounding boxes around types of object on th
 
 Some examples of complex layouts: 
 
-<img width="554" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/dfcf1723-74ac-4060-aaf2-f05740f2f1ff">
+<img width="600" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/dfcf1723-74ac-4060-aaf2-f05740f2f1ff">
 
 
 ## Labelled Data 
 
-We evaluate these methods on a hand-labeled dataset of 214 scans, randomly selected from 1968 and 1955. These scans were labeled by a highly-trained undergraduate research assistant. Summary statistics of this dataset are given in table \ref{tab_aa_dat} and evaluation results are given in the main text. 
+We evaluate these methods on a hand-labeled dataset of 214 scans, randomly selected from 1968 and 1955. These scans were labeled by a highly-trained undergraduate research assistant. Summary statistics of this dataset: 
 
+\begin{table}[ht]
+    \centering
+    \resizebox{.8\linewidth}{!}{
+    \begin{threeparttable}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Scan count & Article bounding boxes & Headline bounding boxes & Article-article associations \\ \midrule
+214 & 3,803 & 2,805 & 1,851 \\ \bottomrule
+\end{tabular}
+    \end{threeparttable}
+  }
+    \caption{Descriptive statistics of article association training data.}
+      \label{tab_aa_dat}
+\end{table}
 
 ## Outline of Approach
 
-<img width="548" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/044304b8-4ccb-4e18-9891-2b0ae1cb1bc2">
+<img width="600" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/044304b8-4ccb-4e18-9891-2b0ae1cb1bc2">
 
 
 ### Installation 
