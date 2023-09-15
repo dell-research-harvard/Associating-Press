@@ -15,22 +15,14 @@ Some examples of complex layouts:
 
 ## Labelled Data 
 
-We evaluate these methods on a hand-labeled dataset of 214 scans, randomly selected from 1968 and 1955. These scans were labeled by a highly-trained undergraduate research assistant. Summary statistics of this dataset: 
+While the pipeline is entirely self-supervised, we labelled a small dataset for evaluation.  This is a hand-labeled dataset of 214 scans, from 1968 and 1955. Summary statistics of this dataset: 
 
-\begin{table}[ht]
-    \centering
-    \resizebox{.8\linewidth}{!}{
-    \begin{threeparttable}
-\begin{tabular}{@{}cccc@{}}
-\toprule
-Scan count & Article bounding boxes & Headline bounding boxes & Article-article associations \\ \midrule
-214 & 3,803 & 2,805 & 1,851 \\ \bottomrule
-\end{tabular}
-    \end{threeparttable}
-  }
-    \caption{Descriptive statistics of article association training data.}
-      \label{tab_aa_dat}
-\end{table}
+| Scan Count | Article bounding boxes | Headline bounding boxes | Article-article associations| 
+| -------- | ------- | ------- | ------- |
+| 214  | 3,803 | 2,805 | 1,851 |
+
+This dataset can be downloaded from huggingface. 
+
 
 ## Outline of Approach
 
