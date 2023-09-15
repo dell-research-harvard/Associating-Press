@@ -6,7 +6,9 @@
 ## Task
 Articles in newspapers and other print media often span multiple columns and have complex layouts. 
 
-Object detection models 
+Object detection models usually draw bounding boxes around types of object on the page, but multiple objects may comprise a full article. For example, a newspaper article could consist of one or more headline bounding boxes, a byline bounding box and multiple article bounding boxes, if it spans multiple columns. This repository contains provides a light-weight full self-supervised method for associating bounding boxes into full articles. 
+
+Some examples of complex layouts: 
 
 <img width="554" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/dfcf1723-74ac-4060-aaf2-f05740f2f1ff">
 
@@ -21,6 +23,9 @@ We evaluate these methods on a hand-labeled dataset of 214 scans, randomly selec
 <img width="548" alt="image" src="https://github.com/dell-research-harvard/Associating-Press/assets/86472495/044304b8-4ccb-4e18-9891-2b0ae1cb1bc2">
 
 
+### Installation 
+
+
 ### Rule-Based Algorithm
 
 First, we used a rule-based algorithm using associate article bounding boxes that are under the same headline, as these are part of the same article with extremely high probability. Algorithm \ref{rule_algo} gives pseudocode for this method. We set the parameters as $P_S = 100$, $P_T = 20$, $P_B = 50$.
@@ -32,6 +37,10 @@ For hard negatives, we used article boxes under the same headline in reverse rea
 ### Cross-encoder 
 
 We use this dataset to finetune a cross-encoder using a RoBERTa base model \cite{liu2019roberta}. We used a Bayesian search algorithm \cite{pmlr-v80-falkner18a} to find optimal hyperparameters on one tenth of our training data (limited compute prevented us from running this search with the full dataset), which led to a learning rate of 1.7e-5, with a batch size of 64 and 29.57\% warm up. We trained for 26 epochs with an AdamW optimizer, and optimize a binary cross-entropy loss.
+
+### Evaluation
+
+
 
 ## More information 
 
